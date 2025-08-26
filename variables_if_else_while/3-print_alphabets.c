@@ -1,24 +1,27 @@
 #include <stdio.h>
+
 /**
 * main - Entry point
 *
-* Description: print alphabet without q and e
+* Description: prints the alphabet in lowercase, then uppercase
 *
 * Return: Always 0 (Success)
 */
 
 int main(void)
+
 {
 	char c;
 
 	for (c = 'a'; c <= 'z'; c++)
 
-	if (c != 'e' && c != 'q')
+	putchar(c);
 
-	{
-		putchar(c);
-	}
+	for (c = 'A'; c <= 'Z'; c++)
+
+	putchar(c);
 
 	putchar('\n');
+
 	return (0);
 }
