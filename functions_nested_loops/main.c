@@ -1,23 +1,47 @@
 k#include "main.h"
-#include <stdio.h>
 
 /**
- * main - check the code
+ * main - test the print_sign function
  *
- * Return: Always 0.
+ * Return: Always 0
  */
-int main(void)
-{
-	int r;
 
-	r = _isalpha('H');
-	printf("%d\n", r);
-	r = _isalpha('o');
-	printf("%d\n", r);
-	r = _isalpha(108);
-	printf("%d\n", r);
-	r = _isalpha(';');
-	printf("%d\n", r);
+int main(void)
+
+{
+
+int r;
+
+	r = print_sign(98);
+
+	_putchar(',');
+
+	_putchar(' ');
+
+	_putchar(r + '0');
+
+	_putchar('\n');
+
+	r= print_sign(0);
+
+	_putchar(',');
+
+	_putchar(' ');
+
+	_putchar(r + '0');
+
+	_putchar('\n');
+
+	r = print_sign(-5);
+
+	_putchar(',');
+
+	_putchar(' ');
+
+	_putchar(r + '0');
+
+	_putchar('\n');
+
 	return (0);
 }
 
