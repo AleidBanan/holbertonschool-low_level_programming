@@ -1,20 +1,22 @@
-#include "main.h"
+k#include "main.h"
 #include <stdio.h>
 
 /**
-* main - check the code
-*
-* Return: Always 0.
-*/
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
 int main(void)
 {
 	int r;
 
-	r = _islower('H');
+	r = _isalpha('H');
 	printf("%d\n", r);
-	r = _islower('o');
+	r = _isalpha('o');
 	printf("%d\n", r);
-	r = _islower(108);
+	r = _isalpha(108);
+	printf("%d\n", r);
+	r = _isalpha(';');
 	printf("%d\n", r);
 	return (0);
 }
