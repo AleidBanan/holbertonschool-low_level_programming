@@ -9,26 +9,32 @@ void print_to_98(int n)
 {
 int current;
 
-	if (n <= 98)
+if (n <= 98)
 {
+
 	for (current = n; current <= 98; current++)
-{
+
+	{
 	printf("%d", current);
+
 	if (current != 98)
+
 	printf(", ");
 	}
 	}
 	else
 	{
+
 	for (current = n; current >= 98; current--)
+
 	{
 	printf("%d", current);
+
 	if (current != 98)
+
 	printf(", ");
-
 	}
-}
+	}
 
-	printf("\n");
-
+printf("\n");
 }
