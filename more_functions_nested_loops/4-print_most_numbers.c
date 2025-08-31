@@ -14,8 +14,10 @@ char c;
 		{
 
 			if (c != 2 && c != 4)
+			{
 
 				_putchar('0' + c);
+			}
 		}
 
 		_putchar('\n');
