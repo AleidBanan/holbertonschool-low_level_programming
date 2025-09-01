@@ -1,4 +1,4 @@
-#include "main.h"
+#include <stdio.h>
 
 /**
 * print_number - prints an integer using _putchar
@@ -8,7 +8,7 @@ void print_number(int n)
 {
 	if (n / 10)
 		print_number(n / 10);
-	_putchar('0' + n % 10);
+	putchar('0' + n % 10);
 }
 
 /**
@@ -24,28 +24,28 @@ int i;
 	{
 		if (i % 3 == 0 && i % 5 == 0)
 		{
-			_putchar('F');
-			_putchar('i');
-			_putchar('z');
-			_putchar('z');
-			_putchar('B');
-			_putchar('u');
-			_putchar('z');
-			_putchar('z');
+			putchar('F');
+			putchar('i');
+			putchar('z');
+			putchar('z');
+			putchar('B');
+			putchar('u');
+			putchar('z');
+			putchar('z');
 		}
 		else if (i % 3 == 0)
 		{
-			_putchar('F');
-			_putchar('i');
-			_putchar('z');
-			_putchar('z');
+			putchar('F');
+			putchar('i');
+			putchar('z');
+			putchar('z');
 		}
 		else if (i % 5 == 0)
 		{
-			_putchar('B');
-			_putchar('u');
-			_putchar('z');
-			_putchar('z');
+			putchar('B');
+			putchar('u');
+			putchar('z');
+			putchar('z');
 		}
 		else
 		{
@@ -53,8 +53,8 @@ int i;
 		}
 
 		if (i != 100)
-			_putchar(' ');
+			putchar(' ');
 	}
-	_putchar('\n');
+	putchar('\n');
 return (0);
 }
