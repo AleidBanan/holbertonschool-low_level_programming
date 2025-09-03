@@ -1,9 +1,15 @@
 #include "main.h"
 
+/**
+ * main - check the code for puts2
+ *
+ * Return: Always 0.
+ */
 int main(void)
 {
-	char str[] = "Holberton!";
+    char *str = "0123456789";
 
-	_puts(str);
-	return 0;
+    puts2(str);
+
+    return (0);
 }
