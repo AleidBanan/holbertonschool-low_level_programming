@@ -1,22 +1,42 @@
 #include "main.h"
 /**
- * cap_string- capitalizes all words of a string.
- *@s: string
- *Return: char
- */
-char *cap_string(char *s)
+* cap_string - capitalizes all words of a string
+* @str: pointer to the string to be modified
+*
+* Description: This function capitalizes the first letter of each word
+* in the string. Words are separated by: space, tab, newline, ',', ';',
+* '.', '!', '?', '"', '(', ')', '{', '}'.
+*
+* Return: pointer to the modified string
+*/
+char *cap_string(char *str)
 {
-	char spc[] = {32, 9, '\n', ',', ';', '.', '!', '?', '"', '(', ')', '{', '}'};
-	int a = 0;
-	unsigned long int i;
+	int i = 0, j;
+	char sep[] = " \t\n,;.!?\"(){}";
+	int capitalize = 1;
 
-	for (a = 0; s[a] != '\0'; a++)
+	while (str[i] != '\0')
 	{
-		for (i = 0; i < strlen(spc) ; i++)
+		if (str[i] >= 'a' && str[i] <= 'z' && capitalize)
 		{
-		if ((a == 0 || s[a - 1] == spc[i]) && (s[a] >= 97 && s[a] <= 122))
-			s[a] = s[a] - 32;
+			str[i] -= 32;
+			capitalize = 0;
 		}
+		else
+		{
+			capitalize = 0;
+			j = 0;
+			while (sep[j] != '\0')
+			{
+				if (str[i] == sep[j])
+				{
+					capitalize = 1;
+					break;
+				}
+				j++;
+			}
+		}
+	i++;
 	}
-return (s);
+	return (str);
 }
