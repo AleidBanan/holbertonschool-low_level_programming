@@ -30,9 +30,10 @@ char *_strstr(char *haystack, char *needle)
 		}
 
 		if (*n == '\0')  /* reached end of needle => match found */
+		{
 			return (haystack);
-
-			haystack++;
+		}
+		haystack++;
 	}
 
 	return (NULL);
