@@ -3,5 +3,6 @@
 
 int _putchar(char c);
 
-int _pow_recursion(int x, int y);
+int _sqrt_recursion(int n);
+int _sqrt_helper(int n, int i);
 #endif
