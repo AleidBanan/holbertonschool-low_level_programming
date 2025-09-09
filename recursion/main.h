@@ -3,6 +3,6 @@
 
 int _putchar(char c);
 
-int _sqrt_recursion(int n);
-int _sqrt_helper(int n, int i);
+int is_prime_number(int n):
+int _is_prime_helper(int n, int i);
 #endif
