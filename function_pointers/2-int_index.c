@@ -15,7 +15,7 @@ void array_iterator(int *array, size_t size, void (*action)(int))
 
 	if (size <= 0)
 		return (-1);
-	for ( i =0; i <=size)
+	for (i = 0; i <= size)
 	{
 		if (cmp(array[i]) != 0)
 		return (i);
