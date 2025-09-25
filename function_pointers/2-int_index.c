@@ -1,3 +1,4 @@
+#include <stddef.h>
 #include "main.h"
 /**
 * int_index - searches for an integer using a comparison function
