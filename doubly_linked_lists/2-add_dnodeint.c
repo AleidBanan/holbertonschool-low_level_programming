@@ -4,7 +4,7 @@
 
 /**
 * add_dnodeint - Adds a new node at the beginning of a dlistint_t list
-* @h: Pointer to the head
+* @head: Pointer to the head of the list
 * @n: integer in the new node
 *
 * Return: new node
