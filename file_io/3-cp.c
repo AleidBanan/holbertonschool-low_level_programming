@@ -88,10 +88,10 @@ int open_file_to(char *file)
 void copy_content(int fd_from, int fd_to, char *file_from, char *file_to)
 {
 	char reader[1024];
-
 	ssize_t r_bytes, w_bytes;
 
-	while ((r_bytes = read(fd_from, reader, 1024)) > 0)
+	r_bytes = read(fd_from, reader, 1024);
+	while (r_bytes > 0)
 	{
 		w_bytes = write(fd_to, reader, r_bytes);
 		if (w_bytes == -1 || w_bytes != r_bytes)
@@ -101,8 +101,8 @@ void copy_content(int fd_from, int fd_to, char *file_from, char *file_to)
 			close(fd_to);
 			exit(99);
 		}
+		r_bytes = read(fd_from, reader, 1024);
 	}
-
 	if (r_bytes == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
